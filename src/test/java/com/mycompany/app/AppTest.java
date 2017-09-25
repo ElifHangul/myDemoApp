@@ -55,7 +55,7 @@ public class AppTest
     public void testArrayThatHasDuplicateElements() {
       ArrayList<String> array1 = new ArrayList<>(Arrays.asList("Emre", "emre", "Mehmet"));
       ArrayList<String> array2 = new ArrayList<>(Arrays.asList("Ekin", "emre", "Mehmet"));
-      assertFalse(new App().search(array1,array2, 2));
+      assertTrue(new App().search(array1,array2, 2));
     }
 
     // lowercase-uppercase karakterler fark etmez.
