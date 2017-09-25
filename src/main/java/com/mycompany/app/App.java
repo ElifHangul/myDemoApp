@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
@@ -14,13 +13,19 @@ public class App {
    public static boolean search(ArrayList<String> array1,ArrayList<String> array2,int e) {
         System.out.println("Verilen adet kadar ortak string var mı?");
 	int count=0;
+	ArrayList<String> arrayOfSameElements=new ArrayList<>();
         if (array1 == null || array2 == null) return false;
   	if(e<0) return false;
 	if(array1.size()<=0 || array2.size()<=0) return false;
 	if(array1.size()<=e || array2.size()<=e) return false;
         for (String str1 : array1) {
 	  for(String str2: array2){
-          if (str1.equals(str2)) count++;
+          if (str1.toLowerCase().equals(str2.toLowerCase())) {
+		if(!arrayOfSameElements.contains(str1)){
+		  arrayOfSameElements.add(str1);
+		  count++;
+		}
+	  }
         }}
 	if(count==e) return true;
         return false;
@@ -78,7 +83,7 @@ public class App {
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
-        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+        return 5000; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
 

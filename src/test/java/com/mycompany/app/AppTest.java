@@ -51,6 +51,19 @@ public class AppTest
       assertFalse(new App().search(array1,array2, 3));
     }
 
+   // bir array içerisinde aynı string birden fazla kez geçiyorsa bir kere yazılmış gibi ele alınır. (lowercase-uppercase insensitive)
+    public void testArrayThatHasDuplicateElements() {
+      ArrayList<String> array1 = new ArrayList<>(Arrays.asList("Emre", "emre", "Mehmet"));
+      ArrayList<String> array2 = new ArrayList<>(Arrays.asList("Ekin", "emre", "Mehmet"));
+      assertFalse(new App().search(array1,array2, 2));
+    }
+
+    // lowercase-uppercase karakterler fark etmez.
+    public void testLowerCaseUpperCaseDoesNotMatter() {
+      ArrayList<String> array1 = new ArrayList<>(Arrays.asList("Emre", "elif", "meHmet", "Reyhan"));
+      ArrayList<String> array2 = new ArrayList<>(Arrays.asList("Ekin", "Elif", "Mehmet", "Zekiye"));
+      assertTrue(new App().search(array1,array2, 2));
+    }
    // empty array varsa false döner.
     public void testEmptyArray() {
       ArrayList<String> array1 = new ArrayList<>();

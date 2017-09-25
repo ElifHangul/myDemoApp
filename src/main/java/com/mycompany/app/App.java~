@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
@@ -20,7 +19,7 @@ public class App {
 	if(array1.size()<=e || array2.size()<=e) return false;
         for (String str1 : array1) {
 	  for(String str2: array2){
-          if (str1.equals(str2)) count++;
+          if (str1.toLowerCase().equals(str2.toLowerCase())) count++;
         }}
 	if(count==e) return true;
         return false;
