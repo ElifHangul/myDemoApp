@@ -71,6 +71,13 @@ public class AppTest
       assertFalse(new App().search(array1,array2, 1));
     }
 
+   // üçüncü parametre integer verilmezse false döner.
+    public void testWrongInput() {
+      ArrayList<String> array1 = new ArrayList<>();
+      ArrayList<String> array2 = new ArrayList<>(Arrays.asList("Ekin", "Elif", "Mehmet", "Zekiye"));
+      assertFalse(new App().search(array1,array2, "ere"));
+    }
+
     // null array varsa false döner.
     public void testNull() {
       assertFalse(new App().search(null,null, 1));

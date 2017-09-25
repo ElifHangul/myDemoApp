@@ -14,7 +14,7 @@ public class App {
         System.out.println("Verilen adet kadar ortak string var mı?");
 	int count=0;
 	ArrayList<String> arrayOfSameElements=new ArrayList<>();
-        if (array1 == null || array2 == null || e=null) return false;
+        if (array1 == null || array2 == null) return false;
   	if(e<0) return false;
 	if(array1.size()<=0 || array2.size()<=0) return false;
 	if(array1.size()<e || array2.size()<e) return false;
@@ -30,6 +30,9 @@ public class App {
 	if(count==e) return true;
         return false;
       }
+ public static boolean search(ArrayList<String> array1,ArrayList<String> array2,String e) { // if the third argument given wrongly return false
+        return false;
+ }
  public static void main(String[] args) {
         port(getHerokuAssignedPort());
 

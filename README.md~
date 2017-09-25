@@ -13,3 +13,10 @@ Bu metodda iki ArrayList elemanlarını karşılaştırarak ortak string sayıs�
  search(array1,array2, 2) =>  İki listede de "Elif" ve "Mehmet" isimleri ortaktır. Toplamda iki adet aynı eleman vardır. Girilen sayı da 2 olduğundan true döner.
 
 AppTest.java dosyasında ilgili metodu test eden unit test'ler bulunmaktadır.
+
+[![Build Status](https://travis-ci.org/ElifHangul/myDemoApp.svg?branch=master)](https://travis-ci.org/ElifHangul/myDemoApp)
+
+Demo Site: https://still-hamlet-33378.herokuapp.com/
+
+for compute: https://still-hamlet-33378.herokuapp.com/compute
+

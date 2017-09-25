@@ -15,3 +15,8 @@ Bu metodda iki ArrayList elemanlarını karşılaştırarak ortak string sayıs�
 AppTest.java dosyasında ilgili metodu test eden unit test'ler bulunmaktadır.
 
 [![Build Status](https://travis-ci.org/ElifHangul/myDemoApp.svg?branch=master)](https://travis-ci.org/ElifHangul/myDemoApp)
+
+Demo Site: https://still-hamlet-33378.herokuapp.com/compute
+
+
+

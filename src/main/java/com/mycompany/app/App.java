@@ -30,6 +30,10 @@ public class App {
 	if(count==e) return true;
         return false;
       }
+// Son arguman yanlış girilirse (int girilmezse) false döner
+ public static boolean search(ArrayList<String> array1,ArrayList<String> array2,String e) { 
+        return false;
+ }
  public static void main(String[] args) {
         port(getHerokuAssignedPort());
 
