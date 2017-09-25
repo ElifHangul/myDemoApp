@@ -30,9 +30,7 @@ public class App {
 	if(count==e) return true;
         return false;
       }
- public static boolean search(ArrayList<String> array1,ArrayList<String> array2,String e) { // if the third argument given wrongly return false
-        return false;
- }
+
  public static void main(String[] args) {
         port(getHerokuAssignedPort());
 
@@ -65,8 +63,11 @@ public class App {
           System.out.println(inputList2);
 
           String input3 = req.queryParams("input3").replaceAll("\\s","");
+	  try{
           int input3AsInt = Integer.parseInt(input3);
-
+	}catch(NumberFormatException e){
+	  int input3AsInt = -1;
+	}
           boolean result = App.search(inputList,inputList2, input3AsInt);
 
          Map map = new HashMap();
@@ -79,6 +80,7 @@ public class App {
               return new ModelAndView(map, "compute.mustache");
             },
             new MustacheTemplateEngine());
+
     }
 
     static int getHerokuAssignedPort() {
