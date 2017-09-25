@@ -76,12 +76,6 @@ public class AppTest
       assertFalse(new App().search(null,null, 1));
     }
 
-    // null integer varsa false döner.
-    public void testNullInt() {
-      ArrayList<String> array1 = new ArrayList<>(Arrays.asList("Emre", "elif", "meHmet", "Reyhan"));
-      ArrayList<String> array2 = new ArrayList<>(Arrays.asList("Ekin", "Elif", "Mehmet", "Zekiye"));
-      assertFalse(new App().search(array1,array2,null));
-    }
     // karşılaştırma yapacağımız sayı engatif verilirse false döner.
     public void testGivenNumberIsNegative() {
       ArrayList<String> array1 = new ArrayList<>(Arrays.asList("Emre", "Elif", "Mehmet", "Reyhan"));
