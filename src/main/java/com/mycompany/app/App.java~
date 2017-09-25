@@ -52,7 +52,7 @@ public class App {
           while (sc2.hasNext())
           {
            String value2 = sc2.next().replaceAll("\\s","");
-            inputList2.add(value);
+            inputList2.add(value2);
           }
           System.out.println(inputList2);
 
@@ -78,7 +78,7 @@ public class App {
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
-        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+        return 5000; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
 
