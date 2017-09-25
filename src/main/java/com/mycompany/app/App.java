@@ -21,8 +21,8 @@ public class App {
         for (String str1 : array1) {
 	  for(String str2: array2){
           if (str1.toLowerCase().equals(str2.toLowerCase())) {
-		if(!arrayOfSameElements.contains(str1)){
-		  arrayOfSameElements.add(str1);
+		if(!arrayOfSameElements.contains(str1.toLowerCase())){
+		  arrayOfSameElements.add(str1.toLowerCase());
 		  count++;
 		}
 	  }
