@@ -10,7 +10,9 @@ Bu metodda iki ArrayList elemanlarını karşılaştırarak ortak string sayıs�
 
  ArrayList<String> array2 = new ArrayList<>(Arrays.asList("Ekin", "Elif", "Mehmet", "Zekiye"))
   
- search(array1,array2, 2) =>  İki listede de "Elif" ve "Mehmet" isimleri ortaktır. Toplamda iki adet aynı eleman vardır. Girilen sayı da 2 olduğundan true döner.
+ search(array1,array2, 2) =>  İki listede de "Elif" ve "Mehmet" isimleri ortaktır. 
+ Toplamda iki adet aynı eleman vardır. 
+ Girilen sayı da 2 olduğundan true döner.
 
 AppTest.java dosyasında ilgili metodu test eden unit test'ler bulunmaktadır.
 
